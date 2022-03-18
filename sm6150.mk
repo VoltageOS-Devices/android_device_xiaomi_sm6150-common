@@ -17,6 +17,9 @@ PRODUCT_COPY_FILES += \
 # Camera
 $(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
 
+# Aospalauncher
+$(call inherit-product-if-exists, vendor/aospalauncher/pixelwho.mk)
+
 # AID/fs configs
 PRODUCT_PACKAGES += \
     fs_config_files
@@ -225,6 +228,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     FM2 \
     qcom.fmradio
+
+#GAPPS
+ifeq ($(WITH_GMS),true)
+    $(call inherit-product-if-exists, vendor/google/gms/config.mk)
+    $(call inherit-product-if-exists, vendor/google/pixel/config.mk)
+endif
 
 #GNSS
 PRODUCT_PACKAGES += \
