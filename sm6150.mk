@@ -15,7 +15,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
 # Camera
-$(call inherit-product-if-exists, vendor/miuicamera/config.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
 
 # AID/fs configs
 PRODUCT_PACKAGES += \
