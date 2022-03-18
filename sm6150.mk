@@ -231,8 +231,7 @@ PRODUCT_PACKAGES += \
 
 #GAPPS
 ifeq ($(WITH_GMS),true)
-    $(call inherit-product-if-exists, vendor/google/gms/config.mk)
-    $(call inherit-product-if-exists, vendor/google/pixel/config.mk)
+    $(call inherit-product, vendor/gms/products/gms.mk)
 endif
 
 #GNSS
